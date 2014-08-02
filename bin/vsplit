@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+
+$: << File.join(File.dirname(__FILE__), '..', 'lib')
+
+require 'getopt/long'
+
+require 'split_video'
+
+@options = Getopt::Long.getopts(
+  ['--slices', '-s', Getopt::OPTIONAL],
+  ['--duration', '-d', Getopt::OPTIONAL],
+  ['--file', '-f', Getopt::REQUIRED]
+)
+
+unless filename = ARGV.shift
+  puts SplitVideo::USAGE
+  exit
+end
+
+filename = @options['file']
+
+SplitVideo.split_a_video(filename, @options)
+
+# vim: set ft=ruby :
