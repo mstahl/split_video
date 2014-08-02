@@ -1,6 +1,6 @@
 # SplitVideo
 
-TODO: Write a gem description
+Simple executables for splitting an transcoding videos.
 
 ## Installation
 
@@ -18,7 +18,10 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    $ vsplit --slices 10 --file my_awesome_but_super_long_video.m4v
+
+...will split the video file `my_awesome_but_super_long_video.m4v` into 10
+slices named like `my_awesome_but_super_long_video-part-0001.m4v`.  That's it!
 
 ## Contributing
 

@@ -8,7 +8,7 @@ require 'split_video'
 
 @options = Getopt::Long.getopts(
   ['--slices', '-s', Getopt::OPTIONAL],
-  ['--duration', '-d', Getopt::OPTIONAL],
+  # ['--duration', '-d', Getopt::OPTIONAL],
   ['--file', '-f', Getopt::REQUIRED]
 )
 

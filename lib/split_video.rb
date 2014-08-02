@@ -46,7 +46,8 @@ module SplitVideo
   end
 
   def self.split_by_duration(filename, duration, options = {})
-    duration_in_seconds(filename)
+    puts "Sorry I haven't implemented this yet."
+    exit
   end
 
   private
