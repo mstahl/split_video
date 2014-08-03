@@ -31,7 +31,6 @@ module SplitVideo
 
     offset = 0.0
     (0..(num_slices - 1)).each do |slice|
-      offset += seconds_per_slice
       print "Cutting slice #{slice}"
       %x{
         ffmpeg -i      "#{filename}"            \
@@ -42,6 +41,7 @@ module SplitVideo
                #{output_filename_for(filename) % slice}
       }
       puts "...done!"
+      offset += seconds_per_slice
     end
   end
 
